@@ -5,7 +5,9 @@ fetch('/api/getUser')
   .then(res => res.json())
   .then(user => console.log('fetch user !', user));
 
-new Vue({
+const VueApp = new Vue({
   el: '#app',
   render: h => h(App),
 });
+
+VueApp();
