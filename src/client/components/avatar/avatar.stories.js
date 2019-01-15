@@ -1,12 +1,10 @@
-import Vue from "vue";
+import { storiesOf } from '@storybook/vue';
 
-import { storiesOf } from "@storybook/vue";
+import Avatar from './avatar.vue';
 
-import Avatar from "./avatar.vue";
-
-storiesOf("Avatar", module)
-  .add("story as a template", () => "<Avatar />")
-  .add("story as a component", () => ({
+storiesOf('Avatar', module)
+  .add('story as a template', () => '<Avatar />')
+  .add('story as a component', () => ({
     components: { Avatar },
-    template: "<Avatar />"
+    template: '<Avatar />',
   }));
