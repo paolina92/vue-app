@@ -18,20 +18,8 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.css$/,
-        use: ["css-loader"]
-      },
-      {
-        test: /\.(png|woff|woff2|eot|ttf|svg)$/
-      },
-      {
         test: /\.vue$/,
         use: "vue-loader"
-      },
-      {
-        test: /\.js$/,
-        loader: 'babel-loader',
-        include: [path.join(__dirname, 'src')],
       }
     ]
   },

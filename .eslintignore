@@ -1,6 +1,0 @@
-webpack.config.js
-package.json
-nodemon.json
-public/*
-**/node_modules/*
-src/server/*

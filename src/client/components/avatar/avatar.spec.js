@@ -1,9 +1,9 @@
-import { mount } from "@vue/test-utils";
-import Avatar from "./avatar";
+import { shallowMount } from "@vue/test-utils";
+import Avatar from "./avatar.vue";
 
-describe("Avatar", () => {
-  it("", () => {
-    const wrapper = mount(Avatar);
-    expect(wrapper.isVueInstance()).toBeTruthy();
+describe("Avatar - with shallowMount", () => {
+  const wrapper = shallowMount(Avatar);
+  it("has a title", () => {
+    expect(wrapper.contains("h1")).toBe(true);
   });
 });
