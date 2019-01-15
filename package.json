@@ -9,7 +9,7 @@
     "client": "webpack-dev-server --mode development --devtool inline-source-map --hot",
     "server": "nodemon src/server/index.js",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "eslint:table": "eslint src/static --ext .js --ext .vue --cache --format table"
+    "eslint:table": "eslint src/client --ext .js --ext .vue --cache --format table"
   },
   "author": "Pauline Thomas",
   "license": "ISC",

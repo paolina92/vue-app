@@ -3,7 +3,7 @@ import App from "./app.vue";
 
 fetch("/api/getUser")
   .then(res => res.json())
-  .then(user => console.log(user));
+  .then(user => console.log("fetch user !", user));
 
 new Vue({
   el: "#app",
