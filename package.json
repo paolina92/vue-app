@@ -20,7 +20,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
-    "vue": "^2.5.22"
+    "vue": "^2.5.22",
+    "vue-router": "^3.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",

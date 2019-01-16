@@ -6,5 +6,5 @@ storiesOf('Avatar', module)
   .add('story as a template', () => '<Avatar />')
   .add('story as a component', () => ({
     components: { Avatar },
-    template: '<Avatar />',
+    template: '<Avatar />'
   }));
