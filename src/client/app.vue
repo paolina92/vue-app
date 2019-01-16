@@ -1,5 +1,13 @@
 <template>
-  <div>
-    <h1>Hello World!</h1>
-  </div>
+  <topNavbar />
 </template>
+
+<script>
+import TopNavbar from './components/topNavbar/topNavbar.vue';
+
+export default {
+  components: {
+    topNavbar: TopNavbar
+  }
+};
+</script>
