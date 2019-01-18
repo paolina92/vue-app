@@ -1,3 +1,9 @@
 <template>
-    <div>Playlists page</div>
+    <div>Playlists {{username}}</div>
 </template>
+
+<script>
+export default {
+  props: ['username']
+};
+</script>

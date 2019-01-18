@@ -15,8 +15,3 @@ const routes = new VueRouter({
   render: h => h(App),
   router: routes
 }))();
-
-
-// fetch('/api/getUser')
-//   .then(res => res.json())
-//   .then(user => console.log('fetch user !', user));

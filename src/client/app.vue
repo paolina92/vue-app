@@ -1,16 +1,41 @@
 <template>
   <div>
-    <topNavbar />
-    <router-view></router-view>
+    <header>
+      <aside>
+        <topMenu v-bind:connectedUser='connectedUser' />
+      </aside>
+      <aside>
+        <avatar v-bind:username='connectedUser.username' v-bind:avatarImgSrc='connectedUser.avatarImgSrc' />
+      </aside>
+    </header>
+    <router-view v-bind:username='connectedUser.username'></router-view>
   </div>
 </template>
 
 <script>
-import TopNavbar from './components/topNavbar/topNavbar.vue';
+import TopMenu from './components/topMenu/topMenu.vue';
+import Avatar from './components/avatar/avatar.vue';
 
 export default {
   components: {
-    topNavbar: TopNavbar
+    topMenu: TopMenu,
+    avatar: Avatar
+  },
+  data() {
+    return {
+      connectedUser: {
+        username: '',
+        avatarImgSrc: ''
+      }
+    };
+  },
+  created() {
+    fetch('/api/getConnectedUser')
+      .then(res => res.json())
+      .then((data) => {
+        this.connectedUser.username = data.username;
+        this.connectedUser.avatarImgSrc = data.avatar.src;
+      });
   }
 };
 </script>

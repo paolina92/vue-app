@@ -1,11 +1,11 @@
 import { shallowMount, RouterLinkStub } from '@vue/test-utils';
-import TopNavbar from './topNavbar.vue';
+import TopMenu from './topMenu.vue';
 
-describe('TopNavbar - with shallowMount', () => {
+describe('TopMenu - with shallowMount', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallowMount(TopNavbar, {
+    wrapper = shallowMount(TopMenu, {
       data() {
         return {
           menuItems: [
