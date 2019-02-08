@@ -2,3 +2,4 @@
 /node_modules/
 /.vscode/
 /vue-app.code-workspace
+.DS_STORE

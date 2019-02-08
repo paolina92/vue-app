@@ -1,11 +1,14 @@
 <template>
   <div>
-    <header>
+    <header class="header">
       <aside>
         <topMenu v-bind:connectedUser='connectedUser' />
       </aside>
       <aside>
-        <avatar v-bind:username='connectedUser.username' v-bind:avatarImgSrc='connectedUser.avatarImgSrc' />
+        <avatar
+          v-bind:username='connectedUser.username'
+          v-bind:avatarImgSrc='connectedUser.avatarImgSrc'
+        />
       </aside>
     </header>
     <router-view v-bind:username='connectedUser.username'></router-view>
@@ -39,3 +42,10 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+</style>
